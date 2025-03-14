@@ -18,4 +18,7 @@ try:
         print("You are categorized as: Senior")
         
 except ValueError:
-    print("Invalid input: Age cannot be a non-number.")
+    if str(user_input) == "Age cannot be negative.":
+        print(f"Invalid input: {user_input}")
+    else:
+        print("Invalid input: Please enter a valid number.")
